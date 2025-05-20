@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<?php echo 'Bienvenue dans la boutique'; ?>
+<!-- index.php --> 
+
+<?php include 'header.php'; ?>
+
+<main>
+    <h2>Page d'Accueil</h2>
+    <p>Bienvenue sur Ma Boutique Tech</p>
+    <p>Le site e-commerce référence dans l'achat de matériel informatique.</p>
+</main>
+
+<?php include 'footer.php'; ?>
+
