@@ -39,42 +39,17 @@ $products = [
     <h2>Nos produits phares</h2>
     <p>Vous trouverez tous les produits les plus vendus.</p>
 
+    <h2>boucle for each</h2>
+<?php foreach($products as $product) : ?>
     <div class="card">
         <div>
-            <h3><?= $products["Warhammer_Le_Jeu_De_Rôle"]["name"]; ?></h3>
+            <h3><?= $product["name"]; ?></h3>
         </div>
-        <div><img src="<?= $products["Warhammer_Le_Jeu_De_Rôle"]["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
-        <div><?= $products["Warhammer_Le_Jeu_De_Rôle"]["price"]; ?> €</div>
+        <div><img src="<?= $product["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
+        <div><?= $product["price"]; ?> €</div>
     </div>
 
-    <div class="card">
-
-        <div>
-            <h3><?= $products["Dés_métal"]["name"];?> </h3>
-        </div>
-        <div>
-            <img src="<?= $products["Dés_métal"]["picture_url"]; ?>" alt="Image de dés en métal">
-        </div>
-        <div><?= $products["Dés_métal"]["price"];?> €</div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h3><?= $products["parchemins"]["name"]; ?></h3>
-        </div>
-        <div>
-            <img src="<?= $products["parchemins"]["picture_url"];?>" alt='Image parchemin '>
-        </div>
-        <div><?=$products["parchemins"]["price"];?> €</div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h3><?= $products["pièces_d_or_factices"]["name"];?></h3>
-        </div>
-        <div><img src="<?=$products["pièces_d_or_factices"]["picture_url"];?>" alt="Image pièce d'or factices"> </div>
-        <div><?=$products["pièces_d_or_factices"]["price"];?> €</div>
-    </div>
+<?php endforeach; ?>
 
 </main>
 

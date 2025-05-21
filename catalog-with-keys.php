@@ -86,6 +86,21 @@ $cartes = [
     "discount" => "10",
     "picture_url" => "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMOq4WU4CgmLLMlR1W2keSPdRBR8MeJQ2tYcEtjFWdfbnZP2X04RUch_hJjBzMBXz7EYcgyONIRIiTaTHgb3M0E3aFOSj25WzfzUjVxQV8tnVnbE9zv2QxbsgI8ha8i_p-nLYsz4yLAUd-/s1600/carte-fantasy.gif",
 ];
+
+$products = [
+    $Dés_métal,
+    $Dés_résine,
+    $Warhammer_Le_Jeu_De_Rôle,
+    $Warhammer_Fantasy,
+    $potions,
+    $plateaux_modulaires,
+    $pièces_d_or_factices,
+    $sceaux,
+    $parchemins,
+    $figurines,
+    $cartes
+];
+
 ?>
 
 <?php include 'header.php'; ?>
@@ -94,42 +109,73 @@ $cartes = [
     <h2>Nos produits phares</h2>
     <p>Vous trouverez tous les produits les plus vendus.</p>
 
+    <h2>boucle for each</h2>
+
+    <!-- <?php foreach ($products as $product) : ?>
     <div class="card">
         <div>
-            <h3><?= $Warhammer_Le_Jeu_De_Rôle["name"]; ?></h3>
+            <h3><?= $product["name"]; ?></h3>
         </div>
-        <div><img src="<?= $Warhammer_Le_Jeu_De_Rôle["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
-        <div><?= $Warhammer_Le_Jeu_De_Rôle["price"]; ?> €</div>
+        <div><img src="<?= $product["picture_url"]; ?>"alt="Image de <?= $product["name"] ?>"</div>
+        <div><?= $product["price"]; ?> €</div>
     </div>
 
+<?php endforeach; ?> -->
+
+<!-- <h2>boucle for</h2>
+    <?php 
+    for ($i=0; $i < count($products);$i++){
+        $product = $products[$i];
+        ?>
+        <div class="card">
+        <div>
+            <h3><?= $product["name"]; ?></h3>
+        </div>
+        <div><img src="<?= $product["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
+        <div><?= $product["price"]; ?> €</div>
+    </div>
+    <?php
+    } 
+    ?> -->
+
+
+<h2>Boucle do while</h2>
+<?php
+    $i=0;
+    do{
+        $product = $products[$i];
+        ?>
+        <div class="card">
+        <div>
+            <h3><?= $product["name"]; ?></h3>
+        </div>
+        <div><img src="<?= $product["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
+        <div><?= $product["price"]; ?> €</div>
+    </div> 
+    
+    <?php
+    $i++;
+    } while ($i < count($products));
+    ?>
+
+<h2>Boucle while</h2>
+<?php
+$i=0;
+while ($i < count($products)){
+    $product = $products[$i];
+    ?>
     <div class="card">
+        <div>
+            <h3><?= $product["name"]; ?></h3>
+        </div>
+        <div><img src="<?= $product["picture_url"]; ?>"alt="Image livre de base Warhammer"> </div>
+        <div><?= $product["price"]; ?> €</div>
+    </div> 
+    <?php
+    $i++;
+};
 
-        <div>
-            <h3><?= $Dés_métal["name"];?> </h3>
-        </div>
-        <div>
-            <img src="<?= $Dés_métal["picture_url"]; ?>" alt="Image de dés en métal">
-        </div>
-        <div><?= $Dés_métal["price"];?> €</div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h3><?= $parchemins["name"]; ?></h3>
-        </div>
-        <div>
-            <img src="<?= $parchemins["picture_url"];?>" alt='Image Ecran AOC 24G2U 24" Noir '>
-        </div>
-        <div><?=$parchemins["price"];?> €</div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h3><?= $pièces_d_or_factices["name"];?></h3>
-        </div>
-        <div><img src="<?=$pièces_d_or_factices["picture_url"];?>" alt='Disque SSD interne Lexar Play 2280 1 To pour PS5 Noir et Argent'> </div>
-        <div><?=$pièces_d_or_factices["price"];?> €</div>
-    </div>
+?>
 
 </main>
 
