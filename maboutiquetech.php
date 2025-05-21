@@ -4,9 +4,9 @@
     <p>Vous trouverez tous les produits les plus vendus.</p>
 
     <div class="card">
-        <div><img src="image/clavier.jpg" alt="Image clavier Apex 3 Fr Steelseries"> </div>
+        <div><img src="$Warhammer_Le_Jeu_De_Rôle[picture_url]" alt="Image clavier Apex 3 Fr Steelseries"> </div>
         <div>
-            <h3>Clavier Apex 3 Fr Steelseries </h3>
+            <h3>$Warhammer_Le_Jeu_De_Rôle </h3>
             <p>Conçu pour les besoins des joueurs, le clavier de gaming Apex 3 offre une résistance à l'eau IP32 contre les éclaboussures et les accidents.Ses switchs ultrasilencieux garantissent une friction réduite pour plus de 20 millions de frappes.</p>
         </div>
         <div>79,99 €</div>
