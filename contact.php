@@ -1,8 +1,8 @@
-<?php include 'header.php' ?>
+<?php include 'template/header.php' ?>
 
 <main>
     <h2>Nous contacter</h2>
-    <p>COmment nous contacter ?</p>
+    <p>Comment nous contacter ?</p>
 </main>
 
-<?php include 'footer.php' ?>
+<?php include 'template/footer.php' ?>

@@ -1,12 +1,12 @@
 <!-- index.php --> 
 
-<?php include 'header.php'; ?>
+<?php include 'template/header.php'; ?>
 
 <main>
     <h2>Page d'Accueil</h2>
-    <p>Bienvenue sur Ma Boutique Tech</p>
-    <p>Le site e-commerce référence dans l'achat de matériel informatique.</p>
+    <p>Bienvenue sur Forge & Sortilège</p>
+    <p>L’antre des aventuriers : dés ensorcelés, grimoires anciens, artefacts oubliés… équipez-vous pour vos plus grandes quêtes !</p>
 </main>
 
-<?php include 'footer.php'; ?>
+<?php include 'template/footer.php'; ?>
 
